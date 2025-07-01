@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weaving Techniques</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#D4C4A8',secondary:'#4A593D'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+  font-family: 'Noto Serif', serif;
+  background-color: #F5F1E6;
+  color: #8B7355;
+}
+.nav-item.active i {
+  color: #4A593D;
+}
+.nav-item.active span {
+  color: #4A593D;
+}
+.filter-chip.active {
+  background-color: #4A593D;
+  color: white;
+}
+.progress-bar {
+  height: 4px;
+  background-color: #E5DFD3;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background-color: #4A593D;
+  border-radius: 2px;
+}
+.difficulty-badge {
+  font-size: 0.65rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+.difficulty-beginner {
+  background-color: #C8E6C9;
+  color: #2E7D32;
+}
+.difficulty-intermediate {
+  background-color: #FFECB3;
+  color: #FF8F00;
+}
+.difficulty-advanced {
+  background-color: #FFCDD2;
+  color: #C62828;
+}
+</style>
+</head>
+<body class="pb-16">
+<!-- Navigation Bar -->
+<nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 px-4 py-3 flex items-center justify-between">
+  <div class="flex items-center">
+    <a href="./Page-1.html" data-readdy="true" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+      <i class="ri-arrow-left-s-line ri-lg text-secondary"></i>
+    </a>
+    <h1 class="text-lg font-medium text-secondary ml-2">Weaving Techniques</h1>
+  </div>
+  <div class="w-10 h-10 flex items-center justify-center cursor-pointer">
+    <i class="ri-search-line ri-lg text-secondary"></i>
+  </div>
+</nav>
+
+<!-- Filter Section -->
+<div class="fixed top-[60px] left-0 w-full bg-white z-40 shadow-sm">
+  <div class="overflow-x-auto py-3 px-4">
+    <div class="flex space-x-2 min-w-max">
+      <div class="filter-chip active px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer">All</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Beginner</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Intermediate</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Advanced</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Baskets</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Furniture</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Decorative</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Most Popular</div>
+      <div class="filter-chip px-3 py-1.5 bg-white rounded-full text-xs font-medium cursor-pointer">Newest</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<main class="mt-[120px] px-4">
+  <!-- Featured Technique -->
+  <section class="mb-6">
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="relative">
+        <img src="https://readdy.ai/api/search-image?query=hands%2520weaving%2520bamboo%2520in%2520detailed%2520close-up%252C%2520traditional%2520cross-weaving%2520technique%2520demonstration%252C%2520step-by-step%2520process%252C%2520skilled%2520artisan%2520hands%252C%2520bamboo%2520strips%2520being%2520woven%2520together%252C%2520warm%2520natural%2520lighting%252C%2520authentic%2520workshop%2520setting%252C%2520educational%2520content%252C%2520high-quality%2520instructional%2520photography&width=800&height=400&seq=101&orientation=landscape" alt="Featured Weaving Technique" class="w-full h-48 object-cover">
+        <div class="absolute top-3 right-3">
+          <span class="difficulty-badge difficulty-beginner">Beginner</span>
+        </div>
+      </div>
+      <div class="p-4">
+        <h2 class="text-lg font-semibold text-secondary">Cross-Weaving Fundamentals</h2>
+        <p class="text-sm mt-1">Master the essential technique that forms the foundation of bamboo crafting. Perfect for beginners looking to start their weaving journey.</p>
+        <div class="flex items-center justify-between mt-3">
+          <div class="flex items-center">
+            <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center cursor-pointer">
+              <i class="ri-play-fill text-white ri-lg"></i>
+            </div>
+            <span class="ml-2 text-xs">Watch Tutorial</span>
+          </div>
+          <div class="flex items-center">
+            <i class="ri-time-line text-secondary"></i>
+            <span class="ml-1 text-xs">25 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technique List -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Popular Techniques</h2>
+    <div class="grid grid-cols-2 gap-4">
+      <!-- Technique 1 -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <div class="relative">
+          <img src="https://readdy.ai/api/search-image?query=bamboo%2520hexagonal%2520weaving%2520pattern%2520close-up%252C%2520detailed%2520technique%2520demonstration%252C%2520bamboo%2520strips%2520forming%2520hexagonal%2520pattern%252C%2520traditional%2520Chinese%2520weaving%2520method%252C%2520instructional%2520content%252C%2520neutral%2520background%252C%2520clear%2520detail%2520of%2520pattern%2520formation%252C%2520educational%2520photography&width=300&height=200&seq=102&orientation=landscape" alt="Hexagonal Weaving" class="w-full h-28 object-cover">
+          <div class="absolute top-2 right-2">
+            <span class="difficulty-badge difficulty-intermediate">Intermediate</span>
+          </div>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-medium">Hexagonal Weaving</h3>
+          <div class="flex items-center mt-1.5 space-x-1">
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-scissors-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-ruler-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-knife-line text-xs text-secondary"></i>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs">35 min</span>
+            <div class="w-16">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technique 2 -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <div class="relative">
+          <img src="https://readdy.ai/api/search-image?query=bamboo%2520spiral%2520weaving%2520pattern%2520close-up%252C%2520detailed%2520technique%2520demonstration%252C%2520bamboo%2520strips%2520forming%2520spiral%2520pattern%252C%2520traditional%2520Chinese%2520weaving%2520method%252C%2520instructional%2520content%252C%2520neutral%2520background%252C%2520clear%2520detail%2520of%2520pattern%2520formation%252C%2520educational%2520photography&width=300&height=200&seq=103&orientation=landscape" alt="Spiral Weaving" class="w-full h-28 object-cover">
+          <div class="absolute top-2 right-2">
+            <span class="difficulty-badge difficulty-advanced">Advanced</span>
+          </div>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-medium">Spiral Weaving</h3>
+          <div class="flex items-center mt-1.5 space-x-1">
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-scissors-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-ruler-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-knife-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-hammer-line text-xs text-secondary"></i>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs">50 min</span>
+            <div class="w-16">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 25%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technique 3 -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <div class="relative">
+          <img src="https://readdy.ai/api/search-image?query=bamboo%2520diamond%2520pattern%2520weaving%2520close-up%252C%2520detailed%2520technique%2520demonstration%252C%2520bamboo%2520strips%2520forming%2520diamond%2520pattern%252C%2520traditional%2520Chinese%2520weaving%2520method%252C%2520instructional%2520content%252C%2520neutral%2520background%252C%2520clear%2520detail%2520of%2520pattern%2520formation%252C%2520educational%2520photography&width=300&height=200&seq=104&orientation=landscape" alt="Diamond Pattern" class="w-full h-28 object-cover">
+          <div class="absolute top-2 right-2">
+            <span class="difficulty-badge difficulty-beginner">Beginner</span>
+          </div>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-medium">Diamond Pattern</h3>
+          <div class="flex items-center mt-1.5 space-x-1">
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-scissors-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-ruler-line text-xs text-secondary"></i>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs">20 min</span>
+            <div class="w-16">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 100%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technique 4 -->
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <div class="relative">
+          <img src="https://readdy.ai/api/search-image?query=bamboo%2520twill%2520weaving%2520pattern%2520close-up%252C%2520detailed%2520technique%2520demonstration%252C%2520bamboo%2520strips%2520forming%2520twill%2520pattern%252C%2520traditional%2520Chinese%2520weaving%2520method%252C%2520instructional%2520content%252C%2520neutral%2520background%252C%2520clear%2520detail%2520of%2520pattern%2520formation%252C%2520educational%2520photography&width=300&height=200&seq=105&orientation=landscape" alt="Twill Weaving" class="w-full h-28 object-cover">
+          <div class="absolute top-2 right-2">
+            <span class="difficulty-badge difficulty-intermediate">Intermediate</span>
+          </div>
+        </div>
+        <div class="p-3">
+          <h3 class="text-sm font-medium">Twill Weaving</h3>
+          <div class="flex items-center mt-1.5 space-x-1">
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-scissors-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-ruler-line text-xs text-secondary"></i>
+            </div>
+            <div class="w-5 h-5 flex items-center justify-center">
+              <i class="ri-knife-line text-xs text-secondary"></i>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mt-2">
+            <span class="text-xs">40 min</span>
+            <div class="w-16">
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step by Step Tutorial -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Featured Tutorial</h2>
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <img src="https://readdy.ai/api/search-image?query=step-by-step%2520bamboo%2520weaving%2520tutorial%252C%2520hands%2520demonstrating%2520precise%2520technique%252C%2520bamboo%2520strips%2520laid%2520out%2520in%2520sequence%252C%2520clear%2520instructional%2520photography%252C%2520educational%2520content%252C%2520bright%2520natural%2520lighting%252C%2520neutral%2520background%252C%2520top-down%2520view%2520of%2520work%2520surface&width=800&height=400&seq=106&orientation=landscape" alt="Step by Step Tutorial" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <div class="flex justify-between items-center">
+          <h3 class="text-base font-semibold">Basic Square Base Technique</h3>
+          <span class="difficulty-badge difficulty-beginner">Beginner</span>
+        </div>
+        
+        <div class="mt-4 space-y-4">
+          <div class="flex">
+            <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center flex-shrink-0 text-xs">1</div>
+            <div class="ml-3">
+              <h4 class="text-sm font-medium">Prepare Your Materials</h4>
+              <p class="text-xs mt-1">Select 8-10 bamboo strips of equal width (approx. 5mm). Soak in water for 30 minutes to increase flexibility.</p>
+            </div>
+          </div>
+          
+          <div class="flex">
+            <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center flex-shrink-0 text-xs">2</div>
+            <div class="ml-3">
+              <h4 class="text-sm font-medium">Create Your Base</h4>
+              <p class="text-xs mt-1">Arrange 4 strips horizontally and 4 strips vertically to form a square grid pattern.</p>
+            </div>
+          </div>
+          
+          <div class="flex">
+            <div class="w-6 h-6 rounded-full bg-secondary text-white flex items-center justify-center flex-shrink-0 text-xs">3</div>
+            <div class="ml-3">
+              <h4 class="text-sm font-medium">Begin Weaving</h4>
+              <p class="text-xs mt-1">Start from the center, weaving each strip over and under in an alternating pattern.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4 flex justify-between">
+          <button class="px-4 py-2 bg-secondary text-white rounded-button text-sm font-medium flex items-center cursor-pointer">
+            <i class="ri-play-fill mr-1"></i>
+            Watch Video
+          </button>
+          <button class="px-4 py-2 border border-secondary text-secondary rounded-button text-sm font-medium cursor-pointer">
+            View All Steps
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Historical Context -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Historical Context</h2>
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="p-4">
+        <div class="flex items-center justify-between cursor-pointer" id="history-toggle">
+          <h3 class="text-base font-medium">Origins & Evolution</h3>
+          <div class="w-6 h-6 flex items-center justify-center">
+            <i class="ri-arrow-down-s-line text-secondary"></i>
+          </div>
+        </div>
+        
+        <div id="history-content" class="mt-3">
+          <p class="text-sm">Bamboo weaving techniques date back over 7,000 years in China, originating during the Neolithic period. Archaeological findings from the Hemudu culture (5000-4500 BCE) include bamboo baskets with sophisticated weaving patterns.</p>
+          
+          <div class="mt-4 flex overflow-x-auto space-x-3 -mx-4 px-4 pb-2">
+            <div class="flex-shrink-0 w-32">
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=ancient%2520Chinese%2520bamboo%2520artifact%252C%2520archaeological%2520finding%252C%2520Neolithic%2520period%2520bamboo%2520basket%2520fragment%252C%2520museum%2520display%252C%2520historical%2520artifact%2520photography%252C%2520neutral%2520background%252C%2520documentary%2520style%252C%2520educational%2520content&width=150&height=150&seq=107&orientation=squarish" alt="Neolithic Period" class="w-full h-24 object-cover">
+                <p class="text-xs mt-1 text-center">Neolithic Period</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-32">
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=Tang%2520Dynasty%2520bamboo%2520weaving%2520artifact%252C%2520historical%2520Chinese%2520bamboo%2520basket%252C%2520museum%2520display%252C%2520ancient%2520craftsmanship%252C%2520documentary%2520style%2520photography%252C%2520neutral%2520background%252C%2520educational%2520content&width=150&height=150&seq=108&orientation=squarish" alt="Tang Dynasty" class="w-full h-24 object-cover">
+                <p class="text-xs mt-1 text-center">Tang Dynasty</p>
+              </div>
+            </div>
+            <div class="flex-shrink-0 w-32">
+              <div class="rounded-lg overflow-hidden">
+                <img src="https://readdy.ai/api/search-image?query=Qing%2520Dynasty%2520bamboo%2520weaving%2520artifact%252C%2520imperial%2520Chinese%2520bamboo%2520basket%252C%2520museum%2520display%252C%2520ancient%2520craftsmanship%252C%2520documentary%2520style%2520photography%252C%2520neutral%2520background%252C%2520educational%2520content&width=150&height=150&seq=109&orientation=squarish" alt="Qing Dynasty" class="w-full h-24 object-cover">
+                <p class="text-xs mt-1 text-center">Qing Dynasty</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Regional Techniques -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Regional Techniques</h2>
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="relative h-48">
+        <img src="https://public.readdy.ai/gen_page/map_placeholder_1280x720.png" alt="China Map" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="text-center">
+            <h3 class="text-white text-lg font-semibold">Explore Regional Styles</h3>
+            <p class="text-white text-sm mt-1">Discover unique techniques from different regions</p>
+          </div>
+        </div>
+        <div class="absolute top-2 right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center cursor-pointer shadow-md">
+          <i class="ri-fullscreen-line text-secondary"></i>
+        </div>
+      </div>
+      <div class="p-4">
+        <div class="grid grid-cols-3 gap-2">
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Sichuan</span>
+            </div>
+          </div>
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Zhejiang</span>
+            </div>
+          </div>
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Fujian</span>
+            </div>
+          </div>
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Anhui</span>
+            </div>
+          </div>
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Jiangsu</span>
+            </div>
+          </div>
+          <div class="text-center cursor-pointer">
+            <div class="w-full aspect-square bg-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <span class="text-xs font-medium text-secondary">Yunnan</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Craftsmen Tips -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Master Craftsmen Tips</h2>
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="p-4">
+        <div class="flex items-center">
+          <img src="https://readdy.ai/api/search-image?query=elderly%2520Chinese%2520master%2520craftsman%2520working%2520with%2520bamboo%252C%2520traditional%2520workshop%252C%2520focused%2520expression%252C%2520skilled%2520hands%252C%2520authentic%2520environment%252C%2520documentary%2520style%2520portrait%252C%2520natural%2520lighting%252C%2520cultural%2520heritage%252C%2520respectful%2520portrayal&width=100&height=100&seq=110&orientation=squarish" alt="Master Chen" class="w-16 h-16 rounded-full object-cover">
+          <div class="ml-3">
+            <h3 class="text-base font-semibold">Master Chen Jianguo</h3>
+            <p class="text-xs text-gray-600">National Intangible Cultural Heritage Inheritor</p>
+          </div>
+        </div>
+        
+        <div class="mt-4 space-y-3">
+          <div class="bg-primary bg-opacity-10 rounded-lg p-3">
+            <p class="text-sm italic">"Always soak your bamboo strips until they are completely pliable. If they resist bending, they need more time in water."</p>
+          </div>
+          <div class="bg-primary bg-opacity-10 rounded-lg p-3">
+            <p class="text-sm italic">"The thickness of your strips should be consistent throughout. Take time to prepare your materials properly before beginning to weave."</p>
+          </div>
+          <div class="bg-primary bg-opacity-10 rounded-lg p-3">
+            <p class="text-sm italic">"When creating a tight weave, use a small wooden tool to gently push strips together rather than pulling with force, which can cause breakage."</p>
+          </div>
+        </div>
+        
+        <button class="mt-4 w-full py-2 border border-secondary text-secondary rounded-button text-sm font-medium cursor-pointer">
+          View More Tips
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools & Materials -->
+  <section class="mb-8">
+    <h2 class="text-lg font-semibold mb-4 text-secondary">Essential Tools & Materials</h2>
+    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+      <div class="p-4">
+        <div class="grid grid-cols-2 gap-4">
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-20 rounded-full flex-shrink-0">
+              <i class="ri-scissors-line text-secondary"></i>
+            </div>
+            <div class="ml-2">
+              <h4 class="text-sm font-medium">Bamboo Scissors</h4>
+              <p class="text-xs text-gray-600">For precise cutting</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-20 rounded-full flex-shrink-0">
+              <i class="ri-knife-line text-secondary"></i>
+            </div>
+            <div class="ml-2">
+              <h4 class="text-sm font-medium">Splitting Knife</h4>
+              <p class="text-xs text-gray-600">For strip preparation</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-20 rounded-full flex-shrink-0">
+              <i class="ri-ruler-line text-secondary"></i>
+            </div>
+            <div class="ml-2">
+              <h4 class="text-sm font-medium">Measuring Tools</h4>
+              <p class="text-xs text-gray-600">For consistent sizing</p>
+            </div>
+          </div>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 flex items-center justify-center bg-primary bg-opacity-20 rounded-full flex-shrink-0">
+              <i class="ri-water-flash-line text-secondary"></i>
+            </div>
+            <div class="ml-2">
+              <h4 class="text-sm font-medium">Soaking Basin</h4>
+              <p class="text-xs text-gray-600">For strip preparation</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-4">
+          <h4 class="text-sm font-medium mb-2">Bamboo Selection</h4>
+          <div class="bg-primary bg-opacity-10 rounded-lg p-3">
+            <p class="text-xs">For beginners, 2-3 year old Moso bamboo (Phyllostachys edulis) is recommended for its flexibility and durability. Look for straight culms with consistent coloring.</p>
+          </div>
+        </div>
+        
+        <button class="mt-4 w-full py-2 bg-secondary text-white rounded-button text-sm font-medium cursor-pointer">
+          Shop for Tools
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Community Projects -->
+  <section class="mb-8">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-lg font-semibold text-secondary">Community Projects</h2>
+      <a href="#" class="text-xs text-primary font-medium cursor-pointer">View All</a>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <img src="https://readdy.ai/api/search-image?query=beautiful%2520finished%2520bamboo%2520basket%2520with%2520hexagonal%2520pattern%252C%2520handcrafted%2520item%252C%2520natural%2520bamboo%2520color%252C%2520product%2520photography%252C%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus&width=200&height=200&seq=111&orientation=squarish" alt="Hexagonal Basket" class="w-full h-28 object-cover">
+        <div class="p-2">
+          <h3 class="text-xs font-medium">Hexagonal Basket</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="text-xs text-gray-600">By Emily Chen</span>
+            <div class="flex items-center">
+              <i class="ri-heart-fill text-red-500 text-xs"></i>
+              <span class="text-xs ml-1">24</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <img src="https://readdy.ai/api/search-image?query=elegant%2520bamboo%2520lampshade%2520with%2520spiral%2520weaving%2520pattern%252C%2520handcrafted%2520item%252C%2520natural%2520bamboo%2520color%252C%2520product%2520photography%252C%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus&width=200&height=200&seq=112&orientation=squarish" alt="Spiral Lampshade" class="w-full h-28 object-cover">
+        <div class="p-2">
+          <h3 class="text-xs font-medium">Spiral Lampshade</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="text-xs text-gray-600">By Michael Wong</span>
+            <div class="flex items-center">
+              <i class="ri-heart-fill text-red-500 text-xs"></i>
+              <span class="text-xs ml-1">31</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <img src="https://readdy.ai/api/search-image?query=bamboo%2520tea%2520tray%2520with%2520diamond%2520pattern%252C%2520handcrafted%2520item%252C%2520natural%2520bamboo%2520color%252C%2520product%2520photography%252C%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus&width=200&height=200&seq=113&orientation=squarish" alt="Diamond Tea Tray" class="w-full h-28 object-cover">
+        <div class="p-2">
+          <h3 class="text-xs font-medium">Diamond Tea Tray</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="text-xs text-gray-600">By Sarah Johnson</span>
+            <div class="flex items-center">
+              <i class="ri-heart-fill text-red-500 text-xs"></i>
+              <span class="text-xs ml-1">18</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow-sm overflow-hidden cursor-pointer">
+        <img src="https://readdy.ai/api/search-image?query=bamboo%2520wall%2520hanging%2520with%2520twill%2520pattern%252C%2520decorative%2520item%252C%2520natural%2520bamboo%2520color%252C%2520product%2520photography%252C%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus&width=200&height=200&seq=114&orientation=squarish" alt="Twill Wall Hanging" class="w-full h-28 object-cover">
+        <div class="p-2">
+          <h3 class="text-xs font-medium">Twill Wall Hanging</h3>
+          <div class="flex items-center justify-between mt-1">
+            <span class="text-xs text-gray-600">By David Liu</span>
+            <div class="flex items-center">
+              <i class="ri-heart-fill text-red-500 text-xs"></i>
+              <span class="text-xs ml-1">27</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Tab Bar -->
+<div class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50">
+  <div class="grid grid-cols-4 h-16">
+    <a href="https://readdy.ai/home/06b7003b-af3a-4403-a3c2-7187fa764931/64f17800-08bb-4782-976b-6d9a0e48067b" data-readdy="true" class="nav-item flex flex-col items-center justify-center cursor-pointer">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-home-5-line ri-lg"></i>
+      </div>
+      <span class="text-xs mt-1">Home</span>
+    </a>
+    <div class="nav-item flex flex-col items-center justify-center cursor-pointer">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-book-open-line ri-lg"></i>
+      </div>
+      <span class="text-xs mt-1">History</span>
+    </div>
+    <div class="nav-item active flex flex-col items-center justify-center cursor-pointer">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-scissors-fill ri-lg"></i>
+      </div>
+      <span class="text-xs mt-1">Crafting</span>
+    </div>
+    <div class="nav-item flex flex-col items-center justify-center cursor-pointer">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-shopping-bag-line ri-lg"></i>
+      </div>
+      <span class="text-xs mt-1">Shop</span>
+    </div>
+  </div>
+</div>
+
+<!-- FAB Button -->
+<div class="fixed bottom-20 right-4 w-12 h-12 bg-secondary rounded-full shadow-lg flex items-center justify-center cursor-pointer">
+  <i class="ri-add-fill ri-xl text-white"></i>
+</div>
+
+<script id="navigation-script">
+document.addEventListener('DOMContentLoaded', function() {
+  const navItems = document.querySelectorAll('.nav-item');
+  navItems.forEach(item => {
+    item.addEventListener('click', function() {
+      navItems.forEach(navItem => {
+        navItem.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+});
+</script>
+
+<script id="filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+  const filterChips = document.querySelectorAll('.filter-chip');
+  filterChips.forEach(chip => {
+    chip.addEventListener('click', function() {
+      filterChips.forEach(filterChip => {
+        filterChip.classList.remove('active');
+      });
+      this.classList.add('active');
+    });
+  });
+});
+</script>
+
+<script id="history-toggle-script">
+document.addEventListener('DOMContentLoaded', function() {
+  const historyToggle = document.getElementById('history-toggle');
+  const historyContent = document.getElementById('history-content');
+  const arrowIcon = historyToggle.querySelector('i');
+  
+  historyToggle.addEventListener('click', function() {
+    if (historyContent.style.display === 'none') {
+      historyContent.style.display = 'block';
+      arrowIcon.classList.remove('ri-arrow-down-s-line');
+      arrowIcon.classList.add('ri-arrow-up-s-line');
+    } else {
+      historyContent.style.display = 'none';
+      arrowIcon.classList.remove('ri-arrow-up-s-line');
+      arrowIcon.classList.add('ri-arrow-down-s-line');
+    }
+  });
+});
+</script>
+</body>
+</html>

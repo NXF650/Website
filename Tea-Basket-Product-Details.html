@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Basket - Product Details</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#D4C4A8',secondary:'#4A593D'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Noto Serif', serif;
+            background-color: #F5F1E6;
+            color: #8B7355;
+        }
+        .nav-item.active i {
+            color: #4A593D;
+        }
+        .nav-item.active span {
+            color: #4A593D;
+        }
+        .gallery-dot.active {
+            background-color: #4A593D;
+            width: 10px;
+        }
+        .tab-button.active {
+            color: #4A593D;
+            border-bottom-color: #4A593D;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="pb-20">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50 px-4 py-3 flex items-center justify-between">
+        <a href="./Page-1.html" data-readdy="true" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+            <i class="ri-arrow-left-s-line ri-xl text-secondary"></i>
+        </a>
+        <h1 class="text-base font-medium text-secondary">Tea Basket</h1>
+        <div class="w-10 h-10 flex items-center justify-center cursor-pointer">
+            <i class="ri-share-line ri-xl text-secondary"></i>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="mt-16 px-0">
+        <!-- Product Gallery -->
+        <section class="relative mb-4">
+            <div id="gallery-container" class="w-full h-80 bg-white relative overflow-hidden">
+                <div id="gallery" class="flex transition-transform duration-300 h-full">
+                    <div class="w-full h-full flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=600&height=600&seq=16&orientation=squarish" alt="Tea Basket - Main View" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full h-full flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520side%2520view%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=600&height=600&seq=17&orientation=squarish" alt="Tea Basket - Side View" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full h-full flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520top%2520view%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=600&height=600&seq=18&orientation=squarish" alt="Tea Basket - Top View" class="w-full h-full object-contain">
+                    </div>
+                    <div class="w-full h-full flex-shrink-0">
+                        <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520with%2520tea%2520set%2520inside%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520lifestyle%2520product%2520usage%252C%2520studio%2520lighting%252C%2520commercial%2520quality&width=600&height=600&seq=19&orientation=squarish" alt="Tea Basket - With Tea Set" class="w-full h-full object-contain">
+                    </div>
+                </div>
+                
+                <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2">
+                    <div class="gallery-dot active h-2 w-2 rounded-full bg-gray-400 transition-all"></div>
+                    <div class="gallery-dot h-2 w-2 rounded-full bg-gray-400 transition-all"></div>
+                    <div class="gallery-dot h-2 w-2 rounded-full bg-gray-400 transition-all"></div>
+                    <div class="gallery-dot h-2 w-2 rounded-full bg-gray-400 transition-all"></div>
+                </div>
+                
+                <button id="gallery-prev" class="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-70 flex items-center justify-center cursor-pointer shadow-sm">
+                    <i class="ri-arrow-left-s-line ri-lg text-secondary"></i>
+                </button>
+                <button id="gallery-next" class="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-full bg-white bg-opacity-70 flex items-center justify-center cursor-pointer shadow-sm">
+                    <i class="ri-arrow-right-s-line ri-lg text-secondary"></i>
+                </button>
+                
+                <button id="fullscreen-button" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white bg-opacity-70 flex items-center justify-center cursor-pointer shadow-sm">
+                    <i class="ri-fullscreen-line ri-lg text-secondary"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Product Info -->
+        <section class="px-4 mb-6">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h1 class="text-xl font-semibold text-secondary">Tea Basket</h1>
+                    <p class="text-sm text-gray-600">By Master Chen</p>
+                </div>
+                <div class="flex items-center bg-primary bg-opacity-10 px-2 py-1 rounded-full">
+                    <i class="ri-star-fill text-yellow-500"></i>
+                    <span class="text-sm ml-1 font-medium">4.8 (126)</span>
+                </div>
+            </div>
+            
+            <div class="mt-3 flex items-center justify-between">
+                <div class="flex items-baseline">
+                    <span class="text-2xl font-semibold text-secondary">$45.00</span>
+                    <span class="text-sm line-through text-gray-500 ml-2">$55.00</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">In Stock</span>
+                </div>
+            </div>
+            
+            <div class="mt-4 flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-truck-line text-secondary"></i>
+                </div>
+                <span class="text-xs ml-1">Free shipping on orders over $75</span>
+            </div>
+            
+            <div class="mt-1 flex items-center">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-shield-check-line text-secondary"></i>
+                </div>
+                <span class="text-xs ml-1">Authenticity guaranteed</span>
+            </div>
+        </section>
+
+        <!-- Product Tabs -->
+        <section class="mb-6">
+            <div class="flex border-b border-gray-200">
+                <button class="tab-button active flex-1 text-center py-3 text-sm font-medium border-b-2 border-transparent" data-tab="description">Description</button>
+                <button class="tab-button flex-1 text-center py-3 text-sm font-medium border-b-2 border-transparent" data-tab="specifications">Specifications</button>
+                <button class="tab-button flex-1 text-center py-3 text-sm font-medium border-b-2 border-transparent" data-tab="reviews">Reviews</button>
+            </div>
+            
+            <div class="px-4">
+                <!-- Description Tab -->
+                <div id="description" class="tab-content active py-4">
+                    <p class="text-sm leading-relaxed">
+                        This exquisite tea basket represents the pinnacle of traditional bamboo weaving craftsmanship. Handcrafted by Master Chen, a third-generation bamboo artisan from Sichuan province, each basket takes over 40 hours to complete.
+                    </p>
+                    <p class="text-sm leading-relaxed mt-3">
+                        The intricate cross-weaving pattern creates both beauty and functionality, with the tight weave ensuring durability while maintaining the basket's lightweight nature. The natural bamboo material has been carefully selected and treated to enhance its longevity while preserving its authentic character.
+                    </p>
+                    <p class="text-sm leading-relaxed mt-3">
+                        Perfect for storing and presenting your finest tea collections, this basket features a removable inner compartment with three sections, allowing you to organize different tea varieties. The natural antibacterial properties of bamboo help maintain the freshness of your tea leaves.
+                    </p>
+                    
+                    <div class="mt-4 bg-white rounded-lg p-3 shadow-sm">
+                        <h3 class="text-sm font-medium text-secondary">Artisan Story</h3>
+                        <p class="text-xs mt-2">
+                            Master Chen learned bamboo weaving from his grandfather at the age of seven. His work has been recognized nationally, with pieces displayed in the National Museum of Chinese Arts and Crafts. Each basket carries his signature weaving technique that combines traditional methods with subtle contemporary elements.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Specifications Tab -->
+                <div id="specifications" class="tab-content py-4">
+                    <div class="space-y-4">
+                        <div>
+                            <h3 class="text-sm font-medium text-secondary">Dimensions</h3>
+                            <ul class="mt-1 text-xs space-y-1">
+                                <li class="flex justify-between">
+                                    <span>Height</span>
+                                    <span>18 cm (7.1 inches)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Diameter</span>
+                                    <span>22 cm (8.7 inches)</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Weight</span>
+                                    <span>350 g (0.77 lbs)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-sm font-medium text-secondary">Materials</h3>
+                            <ul class="mt-1 text-xs space-y-1">
+                                <li class="flex justify-between">
+                                    <span>Primary</span>
+                                    <span>Natural Moso Bamboo</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Finish</span>
+                                    <span>Natural Food-Safe Wax</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Inner Lining</span>
+                                    <span>Unbleached Cotton (Removable)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-sm font-medium text-secondary">Care Instructions</h3>
+                            <ul class="mt-1 text-xs space-y-2">
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                        <i class="ri-water-flash-line text-secondary"></i>
+                                    </div>
+                                    <span class="ml-2">Clean with a slightly damp cloth. Do not submerge in water.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                        <i class="ri-sun-line text-secondary"></i>
+                                    </div>
+                                    <span class="ml-2">Keep away from direct sunlight and heat sources to prevent drying and cracking.</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="w-5 h-5 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                        <i class="ri-oil-line text-secondary"></i>
+                                    </div>
+                                    <span class="ml-2">Apply food-safe bamboo oil every 6 months to maintain flexibility and luster.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-sm font-medium text-secondary">Origin</h3>
+                            <p class="mt-1 text-xs">Handcrafted in Chengdu, Sichuan Province, China</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Reviews Tab -->
+                <div id="reviews" class="tab-content py-4">
+                    <div class="flex items-center justify-between mb-4">
+                        <div>
+                            <div class="flex items-center">
+                                <span class="text-xl font-semibold text-secondary">4.8</span>
+                                <div class="ml-2">
+                                    <div class="flex">
+                                        <i class="ri-star-fill text-yellow-500"></i>
+                                        <i class="ri-star-fill text-yellow-500"></i>
+                                        <i class="ri-star-fill text-yellow-500"></i>
+                                        <i class="ri-star-fill text-yellow-500"></i>
+                                        <i class="ri-star-half-fill text-yellow-500"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500">126 reviews</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="text-xs font-medium text-primary bg-primary bg-opacity-10 px-3 py-1.5 rounded-full !rounded-button cursor-pointer">Write a Review</button>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <!-- Review 1 -->
+                        <div class="border-b border-gray-200 pb-4">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white text-xs font-medium">EL</div>
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium">Emily Liu</p>
+                                        <div class="flex items-center mt-0.5">
+                                            <div class="flex">
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500 ml-2">June 15, 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-6 h-6 flex items-center justify-center cursor-pointer">
+                                    <i class="ri-more-2-fill text-gray-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm mt-2">
+                                This tea basket is absolutely beautiful! The craftsmanship is exceptional, and I love how the inner compartments keep my different tea varieties separate. It's become a centerpiece on my tea table, and all my guests comment on it.
+                            </p>
+                            <div class="mt-3 flex space-x-2 overflow-x-auto">
+                                <img src="https://readdy.ai/api/search-image?query=tea%2520ceremony%2520with%2520bamboo%2520basket%252C%2520elegant%2520setting%252C%2520traditional%2520Chinese%2520tea%2520set%252C%2520lifestyle%2520photography%252C%2520warm%2520tones%252C%2520authentic%2520home%2520setting%252C%2520natural%2520lighting&width=100&height=100&seq=20&orientation=squarish" alt="Customer Photo" class="w-16 h-16 rounded-md object-cover">
+                                <img src="https://readdy.ai/api/search-image?query=close%2520up%2520of%2520bamboo%2520tea%2520basket%2520with%2520tea%2520leaves%2520inside%252C%2520detailed%2520texture%252C%2520product%2520in%2520use%252C%2520authentic%2520setting%252C%2520natural%2520lighting&width=100&height=100&seq=21&orientation=squarish" alt="Customer Photo" class="w-16 h-16 rounded-md object-cover">
+                            </div>
+                        </div>
+                        
+                        <!-- Review 2 -->
+                        <div class="border-b border-gray-200 pb-4">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-white text-xs font-medium">RJ</div>
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium">Robert Johnson</p>
+                                        <div class="flex items-center mt-0.5">
+                                            <div class="flex">
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-line text-yellow-500 text-xs"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500 ml-2">June 2, 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-6 h-6 flex items-center justify-center cursor-pointer">
+                                    <i class="ri-more-2-fill text-gray-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm mt-2">
+                                The quality is outstanding, and I appreciate the attention to detail in the weaving pattern. My only minor complaint is that it's slightly smaller than I expected, but it still holds my tea collection perfectly.
+                            </p>
+                        </div>
+                        
+                        <!-- Review 3 -->
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center">
+                                    <div class="w-8 h-8 rounded-full bg-primary bg-opacity-70 flex items-center justify-center text-white text-xs font-medium">AZ</div>
+                                    <div class="ml-2">
+                                        <p class="text-sm font-medium">Aisha Zhang</p>
+                                        <div class="flex items-center mt-0.5">
+                                            <div class="flex">
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                                <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                            </div>
+                                            <span class="text-xs text-gray-500 ml-2">May 27, 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-6 h-6 flex items-center justify-center cursor-pointer">
+                                    <i class="ri-more-2-fill text-gray-400"></i>
+                                </div>
+                            </div>
+                            <p class="text-sm mt-2">
+                                As a tea enthusiast, I've purchased many storage containers, but this bamboo basket is truly special. The natural bamboo scent complements my oolong teas perfectly, and the craftsmanship is museum-quality. Worth every penny!
+                            </p>
+                        </div>
+                        
+                        <button class="w-full text-sm text-primary font-medium py-2 cursor-pointer">
+                            View All 126 Reviews
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Products -->
+        <section class="mb-20">
+            <div class="px-4">
+                <h2 class="text-lg font-semibold mb-4 text-secondary">You May Also Like</h2>
+            </div>
+            <div class="flex overflow-x-auto space-x-4 pb-2 -mx-4 px-4">
+                <div class="flex-shrink-0 w-36 cursor-pointer">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=elegant%2520bamboo%2520fruit%2520bowl%252C%2520round%2520shape%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=200&height=200&seq=7&orientation=squarish" alt="Bamboo Fruit Bowl" class="w-full h-36 object-cover">
+                        <div class="p-2">
+                            <h3 class="text-sm font-medium">Fruit Bowl</h3>
+                            <p class="text-xs text-gray-600">By Lin Workshop</p>
+                            <div class="flex justify-between items-center mt-1">
+                                <span class="text-sm font-semibold">$38.50</span>
+                                <div class="flex items-center">
+                                    <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                    <span class="text-xs ml-1">4.7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-36 cursor-pointer">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=bamboo%2520storage%2520basket%2520with%2520lid%252C%2520rectangular%2520shape%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=200&height=200&seq=8&orientation=squarish" alt="Storage Basket" class="w-full h-36 object-cover">
+                        <div class="p-2">
+                            <h3 class="text-sm font-medium">Storage Basket</h3>
+                            <p class="text-xs text-gray-600">By Huang Crafts</p>
+                            <div class="flex justify-between items-center mt-1">
+                                <span class="text-sm font-semibold">$52.00</span>
+                                <div class="flex items-center">
+                                    <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                    <span class="text-xs ml-1">4.9</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-36 cursor-pointer">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                        <img src="https://readdy.ai/api/search-image?query=bamboo%2520tea%2520tray%2520with%2520compartments%252C%2520traditional%2520Chinese%2520design%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=200&height=200&seq=22&orientation=squarish" alt="Tea Tray" class="w-full h-36 object-cover">
+                        <div class="p-2">
+                            <h3 class="text-sm font-medium">Tea Tray</h3>
+                            <p class="text-xs text-gray-600">By Master Chen</p>
+                            <div class="flex justify-between items-center mt-1">
+                                <span class="text-sm font-semibold">$65.00</span>
+                                <div class="flex items-center">
+                                    <i class="ri-star-fill text-yellow-500 text-xs"></i>
+                                    <span class="text-xs ml-1">4.8</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Bottom Bar -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-gray-200 z-50 px-4 py-3">
+        <div class="flex items-center justify-between">
+            <div class="flex items-center">
+                <div class="flex border border-gray-300 rounded-lg overflow-hidden">
+                    <button id="decrease-quantity" class="w-8 h-8 flex items-center justify-center bg-gray-100 cursor-pointer">
+                        <i class="ri-subtract-line text-secondary"></i>
+                    </button>
+                    <input type="text" id="quantity" value="1" class="w-10 h-8 text-center border-none text-sm" readonly>
+                    <button id="increase-quantity" class="w-8 h-8 flex items-center justify-center bg-gray-100 cursor-pointer">
+                        <i class="ri-add-line text-secondary"></i>
+                    </button>
+                </div>
+            </div>
+            <button id="add-to-cart" class="bg-secondary text-white py-2.5 px-6 rounded-lg !rounded-button font-medium text-sm flex-1 ml-4">
+                Add to Cart - $45.00
+            </button>
+        </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="fixed bottom-0 left-0 w-full bg-white shadow-lg border-t border-gray-200 z-40 hidden">
+        <div class="grid grid-cols-4 h-16">
+            <div class="nav-item active flex flex-col items-center justify-center cursor-pointer">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-home-5-fill ri-lg"></i>
+                </div>
+                <span class="text-xs mt-1">Home</span>
+            </div>
+            <div class="nav-item flex flex-col items-center justify-center cursor-pointer">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-book-open-line ri-lg"></i>
+                </div>
+                <span class="text-xs mt-1">History</span>
+            </div>
+            <div class="nav-item flex flex-col items-center justify-center cursor-pointer">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-scissors-line ri-lg"></i>
+                </div>
+                <span class="text-xs mt-1">Crafting</span>
+            </div>
+            <div class="nav-item flex flex-col items-center justify-center cursor-pointer">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <i class="ri-shopping-bag-line ri-lg"></i>
+                </div>
+                <span class="text-xs mt-1">Shop</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="fullscreen-modal" class="fixed inset-0 bg-black z-50 hidden">
+        <div class="absolute top-4 right-4 z-10">
+            <button id="close-fullscreen" class="w-10 h-10 rounded-full bg-black bg-opacity-50 flex items-center justify-center cursor-pointer">
+                <i class="ri-close-line ri-xl text-white"></i>
+            </button>
+        </div>
+        <div id="fullscreen-gallery" class="w-full h-full flex">
+            <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
+                <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=800&height=800&seq=16&orientation=squarish" alt="Tea Basket - Main View" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
+                <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520side%2520view%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=800&height=800&seq=17&orientation=squarish" alt="Tea Basket - Side View" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
+                <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520top%2520view%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520single%2520object%2520focus%252C%2520studio%2520lighting%252C%2520commercial%2520quality%252C%2520no%2520people%252C%2520isolated%2520product&width=800&height=800&seq=18&orientation=squarish" alt="Tea Basket - Top View" class="max-w-full max-h-full object-contain">
+            </div>
+            <div class="w-full h-full flex-shrink-0 flex items-center justify-center">
+                <img src="https://readdy.ai/api/search-image?query=handcrafted%2520bamboo%2520tea%2520basket%2520with%2520tea%2520set%2520inside%252C%2520intricate%2520weaving%2520pattern%252C%2520natural%2520bamboo%2520color%252C%2520professional%2520product%2520photography%252C%2520soft%2520neutral%2520background%252C%2520high-quality%2520craftsmanship%252C%2520traditional%2520Chinese%2520bamboo%2520weaving%2520art%252C%2520detailed%2520texture%252C%2520lifestyle%2520product%2520usage%252C%2520studio%2520lighting%252C%2520commercial%2520quality&width=800&height=800&seq=19&orientation=squarish" alt="Tea Basket - With Tea Set" class="max-w-full max-h-full object-contain">
+            </div>
+        </div>
+        <div class="absolute bottom-8 left-0 right-0 flex justify-center space-x-2">
+            <div class="fullscreen-dot active h-2.5 w-2.5 rounded-full bg-white transition-all"></div>
+            <div class="fullscreen-dot h-2.5 w-2.5 rounded-full bg-white bg-opacity-50 transition-all"></div>
+            <div class="fullscreen-dot h-2.5 w-2.5 rounded-full bg-white bg-opacity-50 transition-all"></div>
+            <div class="fullscreen-dot h-2.5 w-2.5 rounded-full bg-white bg-opacity-50 transition-all"></div>
+        </div>
+    </div>
+
+    <!-- Added to Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg w-4/5 p-4">
+            <div class="flex items-center justify-center mb-3">
+                <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                    <i class="ri-check-line ri-xl text-green-600"></i>
+                </div>
+            </div>
+            <h3 class="text-center text-lg font-medium text-secondary">Added to Cart</h3>
+            <p class="text-center text-sm text-gray-600 mt-1">Tea Basket has been added to your cart</p>
+            <div class="mt-4 grid grid-cols-2 gap-3">
+                <button id="continue-shopping" class="py-2.5 border border-secondary text-secondary rounded-lg !rounded-button text-sm font-medium">
+                    Continue Shopping
+                </button>
+                <button id="view-cart" class="py-2.5 bg-secondary text-white rounded-lg !rounded-button text-sm font-medium">
+                    View Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script id="gallery-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const gallery = document.getElementById('gallery');
+            const galleryDots = document.querySelectorAll('.gallery-dot');
+            const prevButton = document.getElementById('gallery-prev');
+            const nextButton = document.getElementById('gallery-next');
+            let currentSlide = 0;
+            const slideCount = galleryDots.length;
+            
+            function updateGallery() {
+                gallery.style.transform = `translateX(-${currentSlide * 100}%)`;
+                galleryDots.forEach((dot, index) => {
+                    if (index === currentSlide) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+            }
+            
+            prevButton.addEventListener('click', function() {
+                currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                updateGallery();
+            });
+            
+            nextButton.addEventListener('click', function() {
+                currentSlide = (currentSlide + 1) % slideCount;
+                updateGallery();
+            });
+            
+            galleryDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentSlide = index;
+                    updateGallery();
+                });
+            });
+            
+            // Touch swipe functionality
+            let startX, moveX;
+            gallery.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+            });
+            
+            gallery.addEventListener('touchmove', function(e) {
+                moveX = e.touches[0].clientX;
+            });
+            
+            gallery.addEventListener('touchend', function() {
+                if (startX && moveX) {
+                    const diff = startX - moveX;
+                    if (Math.abs(diff) > 50) { // Minimum swipe distance
+                        if (diff > 0) {
+                            // Swipe left, next slide
+                            currentSlide = (currentSlide + 1) % slideCount;
+                        } else {
+                            // Swipe right, previous slide
+                            currentSlide = (currentSlide - 1 + slideCount) % slideCount;
+                        }
+                        updateGallery();
+                    }
+                }
+                startX = null;
+                moveX = null;
+            });
+        });
+    </script>
+
+    <script id="tabs-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const tabId = this.dataset.tab;
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+    <script id="quantity-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const decreaseBtn = document.getElementById('decrease-quantity');
+            const increaseBtn = document.getElementById('increase-quantity');
+            const quantityInput = document.getElementById('quantity');
+            const addToCartBtn = document.getElementById('add-to-cart');
+            const basePrice = 45.00;
+            
+            function updateButtonText() {
+                const quantity = parseInt(quantityInput.value);
+                const totalPrice = (basePrice * quantity).toFixed(2);
+                addToCartBtn.textContent = `Add to Cart - $${totalPrice}`;
+            }
+            
+            decreaseBtn.addEventListener('click', function() {
+                let quantity = parseInt(quantityInput.value);
+                if (quantity > 1) {
+                    quantity--;
+                    quantityInput.value = quantity;
+                    updateButtonText();
+                }
+            });
+            
+            increaseBtn.addEventListener('click', function() {
+                let quantity = parseInt(quantityInput.value);
+                if (quantity < 10) { // Set a reasonable maximum
+                    quantity++;
+                    quantityInput.value = quantity;
+                    updateButtonText();
+                }
+            });
+            
+            // Add to cart functionality
+            addToCartBtn.addEventListener('click', function() {
+                const cartModal = document.getElementById('cart-modal');
+                cartModal.classList.remove('hidden');
+                
+                // Hide modal after 3 seconds
+                setTimeout(() => {
+                    cartModal.classList.add('hidden');
+                }, 3000);
+            });
+            
+            // Modal buttons
+            document.getElementById('continue-shopping').addEventListener('click', function() {
+                document.getElementById('cart-modal').classList.add('hidden');
+            });
+            
+            document.getElementById('view-cart').addEventListener('click', function() {
+                document.getElementById('cart-modal').classList.add('hidden');
+                // Redirect to cart page or show cart drawer
+                // For demo purposes, we'll just hide the modal
+            });
+        });
+    </script>
+
+    <script id="fullscreen-script">
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullscreenButton = document.getElementById('fullscreen-button');
+            const fullscreenModal = document.getElementById('fullscreen-modal');
+            const closeFullscreen = document.getElementById('close-fullscreen');
+            const fullscreenGallery = document.getElementById('fullscreen-gallery');
+            const fullscreenDots = document.querySelectorAll('.fullscreen-dot');
+            let currentFullscreenSlide = 0;
+            
+            fullscreenButton.addEventListener('click', function() {
+                fullscreenModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+                
+                // Set fullscreen gallery to match current main gallery position
+                const mainGallery = document.getElementById('gallery');
+                const mainCurrentSlide = parseInt(mainGallery.style.transform.replace('translateX(-', '').replace('%)', '')) / 100 || 0;
+                currentFullscreenSlide = mainCurrentSlide;
+                updateFullscreenGallery();
+            });
+            
+            closeFullscreen.addEventListener('click', function() {
+                fullscreenModal.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+            
+            function updateFullscreenGallery() {
+                fullscreenGallery.style.transform = `translateX(-${currentFullscreenSlide * 100}%)`;
+                fullscreenDots.forEach((dot, index) => {
+                    if (index === currentFullscreenSlide) {
+                        dot.classList.add('active');
+                        dot.classList.remove('bg-opacity-50');
+                    } else {
+                        dot.classList.remove('active');
+                        dot.classList.add('bg-opacity-50');
+                    }
+                });
+            }
+            
+            fullscreenDots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    currentFullscreenSlide = index;
+                    updateFullscreenGallery();
+                });
+            });
+            
+            // Touch swipe functionality for fullscreen
+            let fsStartX, fsMoveX;
+            fullscreenGallery.addEventListener('touchstart', function(e) {
+                fsStartX = e.touches[0].clientX;
+            });
+            
+            fullscreenGallery.addEventListener('touchmove', function(e) {
+                fsMoveX = e.touches[0].clientX;
+            });
+            
+            fullscreenGallery.addEventListener('touchend', function() {
+                if (fsStartX && fsMoveX) {
+                    const diff = fsStartX - fsMoveX;
+                    if (Math.abs(diff) > 50) { // Minimum swipe distance
+                        if (diff > 0) {
+                            // Swipe left, next slide
+                            currentFullscreenSlide = (currentFullscreenSlide + 1) % fullscreenDots.length;
+                        } else {
+                            // Swipe right, previous slide
+                            currentFullscreenSlide = (currentFullscreenSlide - 1 + fullscreenDots.length) % fullscreenDots.length;
+                        }
+                        updateFullscreenGallery();
+                    }
+                }
+                fsStartX = null;
+                fsMoveX = null;
+            });
+        });
+    </script>
+</body>
+</html>
